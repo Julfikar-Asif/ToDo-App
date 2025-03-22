@@ -27,7 +27,7 @@ A simple and efficient To-Do app built with **Flutter** to help users manage the
 ├── 📂 ios
 ├── 📂 lib
 │   ├── 📂 models   # Data models
-│   ├── 📂 providers # State management
+│   ├── 📂 pservices # Service management
 │   ├── 📂 screens  # UI Screens
 │   ├── 📂 widgets  # Reusable widgets
 │   ├── main.dart   # App entry point
@@ -36,6 +36,13 @@ A simple and efficient To-Do app built with **Flutter** to help users manage the
 ├── pubspec.yaml    # Dependencies
 └── README.md       # Project documentation
 ```
+
+## 🚀 How It Works
+1. **Sign Up / Login** with Firebase Authentication.
+2. **Add a new task** using the "+" button.
+3. **Swipe left** to delete a task.
+4. **Swipe Right** to Edit and Delete a task 
+5. **Tasks are stored in Firestore**
 
 ## 🚀 Installation & Setup
 ### **1️⃣ Clone the Repository**
