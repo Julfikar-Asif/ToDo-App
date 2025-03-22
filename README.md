@@ -27,7 +27,7 @@ A simple and efficient To-Do app built with **Flutter** to help users manage the
 ├── 📂 ios
 ├── 📂 lib
 │   ├── 📂 models   # Data models
-│   ├── 📂 services # auth and database related
+│   ├── 📂 providers # State management
 │   ├── 📂 screens  # UI Screens
 │   ├── 📂 widgets  # Reusable widgets
 │   ├── main.dart   # App entry point
@@ -35,43 +35,40 @@ A simple and efficient To-Do app built with **Flutter** to help users manage the
 │   ├── .env        # Environment variables
 ├── pubspec.yaml    # Dependencies
 └── README.md       # Project documentation
+```
+
+## 🚀 Installation & Setup
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/Julfikar-Asif/ToDo-App.git
+cd ToDo-App
+```
 
 ### **2️⃣ Set Up Firebase**
 1. Create a Firebase project.
 2. Add an Android/iOS app to Firebase.
-3. Download and place google-services.json (Android) or GoogleService-Info.plist (iOS) in the respective directories.
-4. Ensure Firebase is initialized in firebase_options.dart.
-
-## ✨ Features
-- ✅ Firebase Authentication (Sign up, Sign in, Sign out)
-- ✅ Add, edit, and delete tasks
-- ✅ Firestore database for real-time syncing
-- ✅ Swipe to delete using **flutter_slidable**
-- ✅ Firebase Storage support for images/files
+3. Download and place `google-services.json` (Android) or `GoogleService-Info.plist` (iOS) in the respective directories.
+4. Ensure Firebase is initialized in `firebase_options.dart`.
 
 ### **3️⃣ Configure Environment Variables**
-
 Create a `.env` file inside the **assets/** folder and add the required API keys:
+```
 FIREBASE_API_KEY=your_firebase_api_key
-
+```
 
 ### **4️⃣ Install Dependencies**
 ```sh
 flutter pub get
+```
 
 ### **5️⃣ Run the App**
 ```sh
 flutter run
-
-## 🚀 How It Works
-1. **Sign Up / Login** with Firebase Authentication.
-2. **Add a new task** using the "+" button.
-3. **Swipe left** to delete a task.
-4. **Swipe Right** to Edit and Delete a task 
-5. **Tasks are stored in Firestore**
+```
 
 ## 🛠️ Contribution
 Feel free to fork the repository and submit pull requests to improve the app! 🚀
 
 ## 📜 License
 This project is licensed under the **MIT License**.
+
