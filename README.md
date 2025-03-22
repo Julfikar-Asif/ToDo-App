@@ -1,16 +1,77 @@
-# to_do
+# To-Do App
 
-A new Flutter project.
+## 📌 Overview
+A simple and efficient To-Do app built with **Flutter** to help users manage their tasks effectively. The app allows users to add, update, and delete tasks while storing data using **Firebase** for authentication and Firestore as a database.
 
-## Getting Started
+## ✨ Features
+- ✅ User authentication with Firebase (Sign up, Sign in, Sign out)
+- 📝 Add, edit, and delete tasks
+- 🔄 Swipe to delete using **flutter_slidable**
+- 🔥 Firestore database for task storage
+- 📂 Firebase Storage support
+- 🌍 Localization support using **intl**
+- 🎨 Clean and responsive UI
 
-This project is a starting point for a Flutter application.
+## 🛠️ Tech Stack
+- **Flutter** (Dart)
+- **Firebase Authentication**
+- **Cloud Firestore**
+- **Provider** (State Management)
+- **Flutter Slidable** (For swipe actions)
+- **Flutter Dotenv** (For environment variables)
 
-A few resources to get you started if this is your first Flutter project:
+## 📂 Project Structure
+```sh
+📦 to_do
+├── 📂 android
+├── 📂 ios
+├── 📂 lib
+│   ├── 📂 models   # Data models
+│   ├── 📂 services # auth and database related
+│   ├── 📂 screens  # UI Screens
+│   ├── 📂 widgets  # Reusable widgets
+│   ├── main.dart   # App entry point
+├── 📂 assets
+│   ├── .env        # Environment variables
+├── pubspec.yaml    # Dependencies
+└── README.md       # Project documentation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### **2️⃣ Set Up Firebase**
+1. Create a Firebase project.
+2. Add an Android/iOS app to Firebase.
+3. Download and place google-services.json (Android) or GoogleService-Info.plist (iOS) in the respective directories.
+4. Ensure Firebase is initialized in firebase_options.dart.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✨ Features
+- ✅ Firebase Authentication (Sign up, Sign in, Sign out)
+- ✅ Add, edit, and delete tasks
+- ✅ Firestore database for real-time syncing
+- ✅ Swipe to delete using **flutter_slidable**
+- ✅ Firebase Storage support for images/files
+
+### **3️⃣ Configure Environment Variables**
+
+Create a `.env` file inside the **assets/** folder and add the required API keys:
+FIREBASE_API_KEY=your_firebase_api_key
+
+
+### **4️⃣ Install Dependencies**
+```sh
+flutter pub get
+
+### **5️⃣ Run the App**
+```sh
+flutter run
+
+## 🚀 How It Works
+1. **Sign Up / Login** with Firebase Authentication.
+2. **Add a new task** using the "+" button.
+3. **Swipe left** to delete a task.
+4. **Swipe Right** to Edit and Delete a task 
+5. **Tasks are stored in Firestore**
+
+## 🛠️ Contribution
+Feel free to fork the repository and submit pull requests to improve the app! 🚀
+
+## 📜 License
+This project is licensed under the **MIT License**.
