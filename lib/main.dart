@@ -1,16 +1,22 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart'; // Import dotenv
+import 'firebase_options.dart';
 import 'package:to_do/home_screen.dart';
 import 'package:to_do/login_screen.dart';
-import 'firebase_options.dart'; // Ensure you have this for Firebase config
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Load .env file
+  await dotenv.load(fileName: "assets/.env");
+
+  // Initialize Firebase
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  
+
   runApp(MyApp());
 }
 
@@ -21,7 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'To-Do App',
       theme: ThemeData.dark(),
-      home: AuthWrapper(), // Handles auth state
+      home: AuthWrapper(),
     );
   }
 }
@@ -38,9 +44,9 @@ class AuthWrapper extends StatelessWidget {
           );
         }
         if (snapshot.hasData) {
-          return HomeScreen(); // If logged in, go to home
+          return HomeScreen();
         } else {
-          return LoginScreen(); // Otherwise, go to login
+          return LoginScreen();
         }
       },
     );

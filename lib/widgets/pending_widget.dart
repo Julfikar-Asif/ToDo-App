@@ -41,7 +41,7 @@ class _PendingWidgetState extends State<PendingWidget> {
               return Container(
                 margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.teal,
+                  color: Colors.cyan,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Slidable(
@@ -64,7 +64,7 @@ class _PendingWidgetState extends State<PendingWidget> {
                     children: [
                       SlidableAction(
                           backgroundColor: Colors.amber,
-                          foregroundColor: Colors.white,
+                          foregroundColor: Colors.black,
                           icon: Icons.edit,
                           label: "Edit",
                           onPressed: (Context) {
@@ -85,15 +85,20 @@ class _PendingWidgetState extends State<PendingWidget> {
                       todo.tittle,
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
+                        color: Colors.blueGrey[900],
                       ),
                     ),
                     subtitle: Text(
                       todo.description,
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 8, 27, 36),
+                      ),
                     ),
                     trailing: Text(
                       '${dt.day}/${dt.month}/${dt.year}',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        color: Colors.red,
                       ),
                     ),
                   ),
@@ -119,11 +124,12 @@ class _PendingWidgetState extends State<PendingWidget> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          backgroundColor: Colors.white,
+          backgroundColor: const Color.fromARGB(255, 49, 52, 73),
           title: Text(
             todo == null ? "Add Task" : "Edit Task",
             style: TextStyle(
               fontWeight: FontWeight.w500,
+
             ),
           ),
           content: SingleChildScrollView(
@@ -136,6 +142,7 @@ class _PendingWidgetState extends State<PendingWidget> {
                     decoration: InputDecoration(
                       labelText: "Title",
                       border: OutlineInputBorder(),
+                    
                     ),
                   ),
                   SizedBox(height: 10),
@@ -144,6 +151,7 @@ class _PendingWidgetState extends State<PendingWidget> {
                     decoration: InputDecoration(
                       labelText: "Description",
                       border: OutlineInputBorder(),
+                      
                     ),
                   ),
                 ],
